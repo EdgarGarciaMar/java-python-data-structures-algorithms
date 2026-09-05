@@ -4,6 +4,8 @@ List is a built-in data structure used to store an ordered collection of items. 
 Mutable: list elements can be changed, updated, added, or removed after the list is created.
 Ordered: elements maintain the order in which they are inserted.
 Index-based: elements are accessed using their position, starting from index 0
+
+https://www.geeksforgeeks.org/python/python-lists/
 """
 
 a = [1, 2, 3]
