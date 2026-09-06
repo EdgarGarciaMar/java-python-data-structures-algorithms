@@ -10,13 +10,11 @@ Return k.
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         start = 0
-        end = len(nums)-1
 
-        while start < end:
+        while start < len(nums):
             if nums[start] == val:
-                nums.remove(val)
-                nums.append("_")
-                start+=1
+                nums.remove(nums[start])
             else:
-                start+=1
-            
+                start += 1
+
+        return len(nums)
