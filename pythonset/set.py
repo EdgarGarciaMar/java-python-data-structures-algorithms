@@ -12,3 +12,17 @@ https://www.w3schools.com/python/python_sets.asp
 thisset = {"apple", "banana", "cherry", True, 1, 2}
 
 print(thisset)
+
+
+class dog():
+    def __init__(self,name, age):
+        self.name = name
+        self.age = age
+
+    def printName(self):
+        print(f'{self.name}, {self.age}')
+
+
+p = dog("bonbon",14)
+
+p.printName()
