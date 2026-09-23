@@ -3,6 +3,7 @@ package com.prueba.mx.prueba.service;
 import com.prueba.mx.prueba.dto.RegistroRequest;
 import com.prueba.mx.prueba.dto.RegistroResponse;
 import com.prueba.mx.prueba.entity.Registro;
+import com.prueba.mx.prueba.exception.RegistroNotFoundException;
 import com.prueba.mx.prueba.repository.RegistroRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +48,7 @@ public class RegistroService {
     public RegistroResponse obtener(Long id) {
         // repository.findById(id) te da Optional<Registro>
         // pista: .map(RegistroResponse::from).orElseThrow(...)
-        RegistroResponse response = registroRepository.findById(id).map(RegistroResponse::from).orElseThrow(() -> new RuntimeException("No existe el registro " + id));
+        RegistroResponse response = registroRepository.findById(id).map(RegistroResponse::from).orElseThrow(() -> new RegistroNotFoundException(id));
         return  response;
     }
 }
